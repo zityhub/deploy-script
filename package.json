@@ -5,6 +5,7 @@
   "bin": {
     "deploy-script": "deploy.sh"
   },
+  "files": ["deploy.sh"],
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
