@@ -1,0 +1,21 @@
+{
+  "name": "@zityhub/deploy-script",
+  "version": "1.0.0",
+  "description": "",
+  "bin": {
+    "deploy-script": "deploy.sh"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "scripts": {
+    "deploy:dry": "./deploy.sh -v dry",
+    "deploy:major": "./deploy.sh -v major",
+    "deploy:minor": "./deploy.sh -v minor",
+    "deploy:patch": "./deploy.sh -v patch"
+  },
+  "keywords": [],
+  "author": "zityhub",
+  "license": "ISC",
+  "main": "index.js"
+}
