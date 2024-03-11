@@ -1,11 +1,13 @@
 {
   "name": "@zityhub/deploy-script",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "bin": {
     "deploy-script": "deploy.sh"
   },
-  "files": ["deploy.sh"],
+  "files": [
+    "deploy.sh"
+  ],
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
