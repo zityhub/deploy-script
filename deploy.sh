@@ -6,7 +6,7 @@ declare -r yellow_colour="\e[0;33m\033[1m"
 declare -r gray_colour="\e[0;37m\033[1m"
 
 timestamp=$(date +%s)
-file_log="$(cd "$(dirname "$0")" && pwd)/deploy.log"
+file_log="$(pwd)/deploy/deploy.log"
 changelog="$(pwd)/CHANGELOG.md"
 declare -r timestamp
 declare -r file_log
@@ -146,6 +146,9 @@ function main() {
   ensure_correct_branch
   ensure_parameter "$parameter_counter" "$version"
 
+  print_info "$(cd "$(dirname "$0")" && pwd)"
+  print_info "$(pwd)"
+  print_info "$file_log"
   print_info "You go to deploy $version in production, is correct? (Intro to continue)" && read -r
   print_info_raw "-------------------- $timestamp --------------------" >> "$file_log"
 
