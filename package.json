@@ -12,10 +12,7 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "scripts": {
-    "deploy:dry": "./deploy.sh -v dry",
-    "deploy:major": "./deploy.sh -v major",
-    "deploy:minor": "./deploy.sh -v minor",
-    "deploy:patch": "./deploy.sh -v patch"
+    "deploy:dry": "./deploy.sh -v dry -b main"
   },
   "keywords": [],
   "author": "zityhub",
