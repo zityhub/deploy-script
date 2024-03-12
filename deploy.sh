@@ -146,9 +146,6 @@ function main() {
   ensure_correct_branch
   ensure_parameter "$parameter_counter" "$version"
 
-  print_info "$(cd "$(dirname "$0")" && pwd)"
-  print_info "$(pwd)"
-  print_info "$file_log"
   print_info "You go to deploy $version in production, is correct? (Intro to continue)" && read -r
   print_info_raw "-------------------- $timestamp --------------------" >> "$file_log"
 
