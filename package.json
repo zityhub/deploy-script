@@ -8,9 +8,6 @@
   "files": [
     "deploy.sh"
   ],
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "scripts": {
     "deploy:dry": "./deploy.sh -v dry -b main"
   },
