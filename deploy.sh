@@ -78,7 +78,7 @@ function deploy() {
 }
 
 function clean_repository() {
-  main_branch=$2
+  main_branch=$1
   print_empty_line
   print_info "🧹 Starting clean repository"
 
