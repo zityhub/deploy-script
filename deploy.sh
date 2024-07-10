@@ -130,6 +130,13 @@ function update_changelog() {
   sed -i.bak "1s/^/$divider\n$title\n$message\n/" "$changelog" && rm "$changelog.bak"
 }
 
+function print_deployment_info() {
+  print_empty_line
+  print_info "📝 Deployment info:"
+  print_info_raw "Version -> $version"
+  print_info_raw "Description -> $message"
+}
+
 function main() {
   start_script
 
@@ -159,6 +166,8 @@ function main() {
       print_info_raw "🚀 Simulating deploy"
       print_info_raw "🧹 Simulating clean"
   fi
+
+  print_deployment_info
 
   finish_script 0
 }
