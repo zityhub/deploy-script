@@ -131,10 +131,18 @@ function update_changelog() {
 }
 
 function print_deployment_info() {
+  tag=$1
+  message=$2
   print_empty_line
   print_info "📝 Deployment info:"
-  print_info_raw "Version -> $version"
+  print_info_raw "Version -> $tag"
   print_info_raw "Description -> $message"
+}
+
+function deploy_dry() {
+  tag="v1.0.0"
+  print_info_raw "🚀 Simulating deploy"
+  print_info_raw "🧹 Simulating clean"
 }
 
 function main() {
@@ -163,11 +171,10 @@ function main() {
       deploy "$version" "$main_branch"
       clean_repository "$main_branch"
   else
-      print_info_raw "🚀 Simulating deploy"
-      print_info_raw "🧹 Simulating clean"
+      deploy_dry
   fi
 
-  print_deployment_info
+  print_deployment_info "$tag" "$message"
 
   finish_script 0
 }
