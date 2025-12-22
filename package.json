@@ -1,5 +1,6 @@
 {
   "name": "@zityhub/deploy-script",
+  "repository": "https://github.com/zityhub/deploy-script",
   "version": "2.2.0",
   "description": "",
   "bin": {
