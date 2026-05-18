@@ -164,7 +164,7 @@ function main() {
   print_info "You go to deploy $version in production, is correct? (Intro to continue)" && read -r
   print_info_raw "-------------------- $timestamp --------------------" >> "$file_log"
 
-  print_info "Write changes description:" && read -r message
+  print_info "Write changes description:" && tput cnorm && read -r message && tput civis
   print_info "Changes message: --- $message --- is correct? (Intro to continue)" && read -r
 
   if [[ "$version" != "dry" ]]; then
