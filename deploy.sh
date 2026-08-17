@@ -59,7 +59,7 @@ function deploy() {
   git pull origin "$main_branch" >> "$file_log" 2>&1
 
   print_info "Step 3 -> pnpm version"
-  pnpm version "$version"
+  pnpm version "$version" >> "$file_log" 2>&1
   tag=$(git describe --tags --exact-match HEAD)
 
   print_info "Step 4 -> edit changelog"
